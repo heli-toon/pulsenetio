@@ -42,7 +42,6 @@
   .strp-window.strp-vertical { min-height: 100%; }
 }
 
-
 /* z-index */
 .strp-window,
 .strp-spinner-move {
@@ -243,7 +242,6 @@
   background-repeat: no-repeat;
 }
 
-
 /* X */
 .strp-close {
   position: absolute;
@@ -342,8 +340,6 @@
   z-index: 80; /* amount of lines, removed later on */
   color: inherit; /* color of the dots, inherited from text on the page */
 }
-
-
 
 /*
  * ===== Skin: strip =====

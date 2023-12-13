@@ -1,5 +1,4 @@
 /*--- big screen ----*/
-
 @media screen and (max-width: 1920px) and (min-width: 1601px) {
     .edit-phto {
         left: 369px;
@@ -1799,5 +1798,4 @@
         width: 100%;
     }
     .apply-bttons > a{font-size: 13px; padding: 8px 14px;}
-
 }
