@@ -129,7 +129,7 @@
                            <li><a title="t" href="settings"> Account Settings </a> </li>
                            <li><a title="t" href="explore">Explore</a> </li>
                            <li><a title="t" href="#"> Help </a> </li>
-                           <li><a title="t" href="logout"> Log Out</a></li>
+                           <li><a title="t" href="/logout"> Log Out</a></li>
                        </ul>
                    </div>
                </div>
@@ -140,11 +140,11 @@
             <p>Search results count</p>
             {% for users in username_profile_list %}
             <section class="search-result-item">
-                <a href="/profile/{{user.user}}"><img src="{{users.profileimg.url}}" class="image" alt=""></a>
+                <a href="/profile/{{users.user}}"><img src="{{users.profileimg.url}}" class="image" alt=""></a>
                 <div class="search-result-item-body">
                     <div class="row">
                         <div class="col-sm-9">
-                            <h4 class="search-result-item-heading"><a href="/profile/{{user.user}}"><b>@{{users.user}}</b></a></h4>
+                            <h4 class="search-result-item-heading"><a href="/profile/{{users.user}}"><b>@{{users.user}}</b></a></h4>
                             <p class="info">{{users.location}}</p>
                             <p class="description">{{users.bio}}</p>
                         </div>
