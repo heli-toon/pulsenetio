@@ -1,0 +1,375 @@
+@font-face {
+  font-family: "Afcad";
+  src: url("../fonts/Afacad-Regular.ttf");
+}
+@font-face {
+  font-family: "Geist";
+  src: url("../fonts/Geist-Regular.otf");
+}
+:root {
+  --gradient: linear-gradient(
+    to right,
+    var(--primary2),
+    var(--primary),
+    var(--black2),
+    var(--primary),
+    var(--primary2)
+  );
+  --purple1: #aa7fd4;
+  --purple2: #8b4cca;
+  --black1: #18191a;
+  --black2: #242526;
+  --black3: #39393a;
+  --white1: #ffffff;
+  --white2: #f0f2f5;
+  --white3: #e7e9ed;
+  --white3: #e4e6cc;
+  --border-rad-round: 50%;
+  --border-rad-card: 8px;
+  --border-rad-big: 25px;
+  --anim-short: 250ms;
+  --anim-mid: 600ms;
+  --anim-long: 1s;
+  --nav-size: 60px;
+  --primary: var(--purple1);
+}
+.light {
+  --bg: var(--white1);
+  --bg-sec: var(--white2);
+  --bg-teri: var(--white3);
+  --text-color: var(--black1);
+  --primary: var(--purple2);
+  --border-color: var(--primary);
+  --btn-bg: var(--primary);
+}
+.dark {
+  --bg: var(--black1);
+  --bg-sec: var(--black2);
+  --bg-teri: var(--black3);
+  --text-color: var(--white1);
+  --primary: var(--purple1);
+  --btn-bg: var(--primary);
+  --border-color: var(--primary);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  font-family: "Geist", "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Oxygen, Ubuntu, sans-serif;
+  overflow-x: hidden;
+  color: var(--text-color);
+  background: var(--bg);
+  transition: background var(--anim-mid) ease-in-out,
+    color var(--anim-long) ease-in-out;
+}
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: auto;
+  scrollbar-color: var(--primary) var(--bg);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Afcad", "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Oxygen, Ubuntu, sans-serif;
+  line-height: inherit;
+  letter-spacing: -1px;
+}
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: var(--border-rad-card);
+}
+html::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+html::-webkit-scrollbar-track {
+  background: var(--bg);
+  margin-block: 0.5rem;
+}
+::selection {
+  background: var(--primary);
+  color: var(--bg);
+}
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--primary);
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+/* Nav Bar */
+nav.navbar {
+  height: var(--nav-size);
+  background: var(--bg-sec);
+  padding: 0 1rem;
+  border-bottom: 1px solid var(--bg-teri);
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .logo .search-box {
+  height: calc(var(--nav-size) * 0.65);
+  background: var(--bg-teri);
+  border-radius: var(--border-rad-big);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+}
+nav .logo .search-box i {
+  margin-left: 1rem;
+}
+nav .logo .search-box input {
+  background: var(--bg-teri);
+  color: var(--text-color);
+  border-top-right-radius: var(--border-rad-big);
+  border-bottom-right-radius: var(--border-rad-big);
+  border: none;
+  outline: none;
+  margin-left: 1rem;
+}
+@media (max-width: 600px) {
+  nav .logo .search-box{
+    margin: 0;
+    width: calc(var(--nav-size) * 0.8);
+    height: calc(var(--nav-size) * 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  nav .logo .search-box i{
+    margin: 0;
+  }
+  nav .logo .search-box input {
+    display: none !important;
+  }
+}
+nav .logo .search-box input::placeholder {
+  color: var(--text-color);
+}
+nav .logo img {
+  width: calc(var(--nav-size) * 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-nav {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-item {
+  width: calc(var(--nav-size) * 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-icon-button {
+  --nav-button-size: calc(var(--nav-size) * 0.65);
+  color: var(--text-color);
+  width: var(--nav-button-size);
+  height: var(--nav-button-size);
+  background-color: var(--bg-teri);
+  border-radius: var(--border-rad-round);
+  padding: 5px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--anim-short) filter;
+}
+.nav-icon-button.active {
+  color: var(--primary);
+}
+.nav-icon-button:hover {
+  filter: brightness(1.2);
+}
+.nav-dropdown {
+  display: none !important;
+  position: absolute;
+  opacity: 0;
+  top: 58px;
+  width: 300px;
+  transform: translateX(-45%);
+  background-color: var(--bg-sec);
+  padding: 1rem;
+  overflow: hidden;
+  border-top: 2px solid var(--bg-teri);
+  border-radius: var(--border-rad-card);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.175em 0.5em;
+  transition: opacity var(--anim-short) ease-out;
+  z-index: -1;
+}
+.has-dropdown:focus-within .nav-dropdown {
+  display: block !important;
+  opacity: 1;
+  z-index: 3;
+  pointer-events: auto;
+}
+.nav-dropdown-menu-item {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-rad-card);
+  transition: background var(--anim-mid);
+  padding: 0.5rem;
+}
+.nav-dropdown-menu-item:hover {
+  color: var(--primary);
+  background: var(--bg-teri);
+}
+.nav-dropdown-menu-item a {
+  width: 100%;
+  color: var(--text-color);
+}
+.nav-dropdown-menu-item a:hover {
+  color: var(--primary);
+}
+.nav-dropdown-menu-item i {
+  margin-right: 1em;
+  margin-left: auto;
+}
+/* LOGIN / FORM */
+main#in {
+  margin: 65px 5rem;
+}
+main.signup,
+main.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90vh;
+}
+main.signup .form-section,
+main.login .form-section {
+  width: 40vw;
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-sec);
+  border-radius: var(--border-rad-card);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  main.signup .form-section,
+  main.login .form-section {
+    width: 60vw;
+  }
+}
+@media (max-width: 425px) {
+  main.signup .form-section,
+  main.login .form-section {
+    width: 80vw;
+  }
+}
+main.signup .form-title h1,
+main.login .form-title h1 {
+  font-size: 1.6rem;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 1.6rem;
+  text-transform: uppercase;
+}
+main.signup .form-section .form-control,
+main.login .form-section .form-control {
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+main.login .form-section input,
+main.signup .form-section input {
+  width: 100%;
+  display: flex;
+  outline: none;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  position: relative;
+  height: 3.5rem;
+  position: relative;
+  margin-bottom: 1rem;
+  border: none;
+  border-bottom: 1px solid var(--text-color);
+  display: block;
+  width: 100%;
+  padding: 3px 42px 0px;
+  color: var(--text-color);
+  transition: var(--anim-short);
+  background: var(--bg-sec);
+}
+main.signup .form-section input:focus {
+  border-bottom: 1px solid var(--border-color) !important;
+}
+main.login .form-section input::placeholder,
+main.signup .form-section input::placeholder {
+  color: var(--text-color);
+}
+main.login .form-section i,
+main.signup .form-section i {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  z-index: 2;
+}
+main.signup .form-section .submit button {
+  border: none;
+  width: 100%;
+  height: 49px;
+  margin-top: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: var(--btn-bg);
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  transition: all var(--anim-mid);
+  border-radius: var(--border-rad-card);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+main.signup .form-section .submit button:hover {
+  color: var(--black2);
+  filter: brightness(1.2);
+}
