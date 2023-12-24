@@ -13,17 +13,17 @@
     <main class="signup">
       <section class="form-section">
         <div class="form-wrapper">
-          <div class="error-message">
-            {% for message in messages %}
-            <style>
-              h5 {
-                color: red;
-              }
-            </style>
-            <h5>{{message}}</h5>
-            {% endfor %}
-          </div>
-          <form class="form" action="">
+          <form action="" method="POST">
+            <div class="error-message">
+              {% for message in messages %}
+              <style>
+                h5 {
+                  color: red;
+                }
+              </style>
+              <h5>{{message}}</h5>
+              {% endfor %}
+            </div>
             {% csrf_token %}
             <div class="form-title">
               <h1>Register</h1>
