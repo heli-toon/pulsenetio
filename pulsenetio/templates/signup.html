@@ -8,6 +8,7 @@
     <link href="{% static 'assets/images/favicon.png' %}" rel="icon" type="image/png">
     <link rel="stylesheet" href="{% static 'assets/css/bootstrap-icons.min.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+    <script defer src="{% static 'js/script.js' %}"></script>
   </head>
   <body class="light">
     <main class="signup">
@@ -30,7 +31,7 @@
             </div>
             <div class="form-control">
               <i class="bi bi-person"></i>
-              <input type="text" name="username" placeholder="Username" required />
+              <input type="text" spellcheck="false" pattern="[A-z_]*" name="username" placeholder="Username" required />
             </div>
             <div class="form-control">
               <i class="bi bi-envelope"></i>
