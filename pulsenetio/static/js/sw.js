@@ -5,6 +5,7 @@ self.addEventListener("install", (e) => {
         "./",
         "{% static 'js/script.js' %}",
         "{% static 'css/main.css' %}",
+        "{% static 'css/bootstrap-icons.min.css' %}",
         "{% static 'images/logo.png' %}",
         "{% static 'images/logo_192x192.png' %}",
       ]);

@@ -1,0 +1,23 @@
+{
+  "name": "Pulsenetio SN",
+  "short_name": "Pulsenetio",
+  "start_url": "./",
+  "background_color": "#aa7fd4",
+  "theme_color": "#8b4cca",
+  "description": "Reflecting the heartbeat of social interactions",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "{% static 'images/logo_192x192.png' %}",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "{% static 'images/logo_512x512.png' %}",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable any"
+    }
+  ]
+}
