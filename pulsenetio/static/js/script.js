@@ -31,3 +31,16 @@ searchLink.addEventListener("click", () => {
   searchBox.style.width = "13rem";
   logo.style.display = "none";
 });
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("serviceWorker.js")
+    .then((registration) => {
+      console.log("Service Worker Registered");
+      console.log(registration);
+    })
+    .catch((error) => {
+      console.log("Service Worker Registration failed!");
+      console.log(error);
+    });
+}
