@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.template import RequestContext
 from django.contrib import messages
 from django.contrib.auth.models import User, auth
 from django.contrib.auth.decorators import login_required
@@ -231,3 +232,11 @@ def search(request):
     print(search_matches)
         
     return render(request, 'search.html', {'search_matches' : search_matches, 'user_profile' : user_profile, 'username_profile_list' : username_profile_list})
+
+def handler404 (request, *args, **argv):
+    response = render (request, '404.html', {}, status=404)
+    return response
+
+def handler500 (request, *args, **argv):
+    response = render (request, '500.html', {}, status=500)
+    return response
