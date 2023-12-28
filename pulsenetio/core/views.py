@@ -226,6 +226,8 @@ def search(request):
             username_profile_list.append(profile_lists)
 
         username_profile_list = list(chain(*username_profile_list))
-        search_matches = len(username_profile_list)
+    
+    search_matches = len(username_profile_list)
+    print(search_matches)
         
-    return render(request, 'search.html', {'user_profile' : user_profile, 'username_profile_list' : username_profile_list, 'search_matches' : search_matches})
+    return render(request, 'search.html', {'search_matches' : search_matches, 'user_profile' : user_profile, 'username_profile_list' : username_profile_list})

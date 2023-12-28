@@ -418,6 +418,16 @@ nav .search-box .submit-search{
     width: 55vw !important;
   }
 }
+main#in.profile{
+  align-items: center;
+  flex-direction: column !important;
+}
+main#in.profile .personal-posts{
+  display: flex;
+  flex-direction: column;
+  align-self: center !important;
+  align-items: center;
+}
 main#in {
   margin: 70px 2rem;
   padding-top: 1rem;
@@ -879,6 +889,12 @@ main#in .profile-section {
   align-items: center;
   flex-direction: column;
   width: 100%;
+  gap: 2rem;
+}
+.profile-ops{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 2rem;
 }
 .profile-section .profile-detail{
