@@ -22,25 +22,6 @@
               <img src="{% static 'images/logo.png' %}" alt="Pulsenetio Logo" />
             </a>
           </div>
-          <form class="search-box" action="/search" method="POST">
-            {% csrf_token %}
-            <a 
-            title="Search"
-            type="submit"
-            href="#" 
-            onfocus="event.preventDefault()"
-            onclick="event.preventDefault()"
-            ><i class="bi bi-search"></i></a>
-            <input
-              class="search-input"
-              type="search"
-              placeholder="Search for a user..."
-              name="username"
-              title="Search"
-              id="search"
-            />
-            <button title="Submit search" class="submit-search btn" type="submit"><i class="bi bi-search"></i></button>
-          </form>
         </div>
         <ul class="navbar-nav">
           <li class="nav-item">
