@@ -3,3 +3,4 @@ Django==4.1.5
 python-dateutil==2.8.2
 six==1.16.0
 sqlparse==0.4.3
+sqlite==3.34.0
