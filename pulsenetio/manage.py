@@ -2,7 +2,6 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-import psycopg2
 
 def main():
     """Run administrative tasks."""
